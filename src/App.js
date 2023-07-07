@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from './components/Home';
+import Cart from './components/Cart';
 /* import Shop from './components/Shop'; */
 import SecretShop from './components/SecretShop';
 
@@ -18,6 +19,7 @@ function App() {
           <li>
             <Link className='nav-link' to={'/secretshop'}>Secret Shop</Link>
           </li>
+          
         </ul>
       </nav>
       <Routes>
@@ -25,6 +27,7 @@ function App() {
         {/* <Route path="/shop" element={<Shop />} /> */}
         <Route path="/secretshop" element={<SecretShop />} />
       </Routes>
+      <Cart />
     </div>
   );
 }

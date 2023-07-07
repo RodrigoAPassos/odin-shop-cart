@@ -36,15 +36,16 @@ const SecretShop = () => {
         {name: "Cornucopia", image: cornucopia, status: "+5 Health Regeneration \n +2 Mana Regeneration \n +7 Attack Damage", cost: 1200}
     ];
 
-    const [isHovering, setHover] = useState(false);
+    //Fix hover for each
+    //const [isHovering, setHover] = useState(false);
 
-    const handleMouseOver = () => {
+    /* const handleMouseOver = () => {
         setHover(true);
     }
 
     const handleMouseOut = () => {
         setHover(false);
-    }
+    } */
 
     const shopItem = items.map((item, index) => {
         return (
@@ -53,7 +54,7 @@ const SecretShop = () => {
                 <img src={item.image}/>
                 <div className='cost'>{item.cost}<img src={goldIcon} /></div>
                 {isHovering===true && (
-                <div className='item-status'>{item.status}</div>
+                <div className={ isHovering ? 'item-status hovering' : "item-status"}>{item.status}</div>
                 )}
             </li>
         )
